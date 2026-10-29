@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="PX4_X500_SO101_empty_arm_sequence">
+  <compiler angle="radian" inertiafromgeom="false" fusestatic="false" />
+  <option timestep="0.00025" gravity="0 0 -9.81" integrator="implicitfast" />
+  <visual />
+  <asset>
+    <material name="NXP-HGD-CF_LandingFoam-material" rgba="0.7019608 0.7019608 0.7019608 1" />
+    <material name="NXP-HGD-CF_LandingRubber-material" rgba="0.003921569 0.003921569 0.003921569 1" />
+    <texture name="NXP-HGD-CF_CarbonFiber-material_texture" type="2d" file="assets/CF.png" />
+    <material name="NXP-HGD-CF_CarbonFiber-material" rgba="1 1 1 1" texture="NXP-HGD-CF_CarbonFiber-material_texture" />
+    <material name="NXP-HGD-CF_Metal-material" rgba="0.3185468 0.3185468 0.3185468 1" />
+    <material name="NXP-HGD-CF_RailsRubber-material" rgba="0.1004815 0.1004815 0.1004815 1" />
+    <material name="NXP-HGD-CF_FMUK66-material" rgba="0.9960784 0.9960784 0.9960784 1" />
+    <material name="NXP-HGD-CF_RailsAntennaHolder-material" rgba="0.9568627 0.9568627 0 1" />
+    <material name="NXP-HGD-CF_LandingPlastic-material" rgba="0.5225216 0.5225216 0.5225216 1" />
+    <material name="NXP-HGD-CF_FMURubber-material" rgba="0.1882353 0.2313726 0.5882354 1" />
+    <material name="5010Base_Material_003-material" rgba="0.25 0.25 0.25 1" />
+    <material name="5010Bell_Material_002-material" rgba="0.03106355 0.03106355 0.03106355 1" />
+    <material name="5010Bell_Material_001-material" rgba="0.25 0.25 0.25 1" />
+    <mesh name="NXP-HGD-CF_LandingFoam_0" file="assets/NXP-HGD-CF_LandingFoam_0.obj" inertia="convex" />
+    <mesh name="NXP-HGD-CF_LandingRubber_1" file="assets/NXP-HGD-CF_LandingRubber_1.obj" inertia="convex" />
+    <mesh name="NXP-HGD-CF_CarbonFiber_2" file="assets/NXP-HGD-CF_CarbonFiber_2.obj" inertia="convex" />
+    <mesh name="NXP-HGD-CF_Metal_3" file="assets/NXP-HGD-CF_Metal_3.obj" inertia="convex" />
+    <mesh name="NXP-HGD-CF_RailsRubber_4" file="assets/NXP-HGD-CF_RailsRubber_4.obj" inertia="convex" />
+    <mesh name="NXP-HGD-CF_FMUK66_5" file="assets/NXP-HGD-CF_FMUK66_5.obj" inertia="convex" />
+    <mesh name="NXP-HGD-CF_RailsAntennaHolder_6" file="assets/NXP-HGD-CF_RailsAntennaHolder_6.obj" inertia="convex" />
+    <mesh name="NXP-HGD-CF_LandingPlastic_7" file="assets/NXP-HGD-CF_LandingPlastic_7.obj" inertia="convex" />
+    <mesh name="NXP-HGD-CF_FMURubber_8" file="assets/NXP-HGD-CF_FMURubber_8.obj" inertia="convex" />
+    <mesh name="5010Base_Stator_0" file="assets/5010Base_Stator_0.obj" inertia="convex" />
+    <mesh name="5010Bell_Bellside_0" file="assets/5010Bell_Bellside_0.obj" inertia="convex" />
+    <mesh name="5010Bell_BellHead_001_1" file="assets/5010Bell_BellHead_001_1.obj" inertia="convex" />
+    <material name="so101_3d_printed" rgba="1.0 1.00 1.00 1.0" />
+    <material name="so101_sts3215" rgba="0.1 0.1 0.1 1.0" />
+    <texture name="x500_NXP_FMUK66_FRONT_material_texture" type="2d" file="assets/nxp.png" />
+    <material name="x500_NXP_FMUK66_FRONT_material" texture="x500_NXP_FMUK66_FRONT_material_texture" />
+    <texture name="x500_NXP_FMUK66_TOP_material_texture" type="2d" file="assets/nxp.png" />
+    <material name="x500_NXP_FMUK66_TOP_material" texture="x500_NXP_FMUK66_TOP_material_texture" />
+    <texture name="x500_RDDRONE_FMUK66_TOP_material_texture" type="2d" file="assets/rd.png" />
+    <material name="x500_RDDRONE_FMUK66_TOP_material" texture="x500_RDDRONE_FMUK66_TOP_material_texture" />
+    <mesh name="x500_1345_prop_ccw" file="assets/x500_1345_prop_ccw.stl" scale="0.846153846154 0.846153846154 0.846153846154" inertia="convex" />
+    <mesh name="x500_1345_prop_cw" file="assets/x500_1345_prop_cw.stl" scale="0.846153846154 0.846153846154 0.846153846154" inertia="convex" />
+    <mesh name="so101_base_motor_holder_so101_v1" file="assets/so101_base_motor_holder_so101_v1.stl" scale="1 1 1" inertia="convex" />
+    <mesh name="so101_base_so101_v2" file="assets/so101_base_so101_v2.stl" scale="1 1 1" inertia="convex" />
+    <mesh name="so101_sts3215_03a_v1" file="assets/so101_sts3215_03a_v1.stl" scale="1 1 1" inertia="convex" />
+    <mesh name="so101_waveshare_mounting_plate_so101_v2" file="assets/so101_waveshare_mounting_plate_so101_v2.stl" scale="1 1 1" inertia="convex" />
+    <mesh name="so101_motor_holder_so101_base_v1" file="assets/so101_motor_holder_so101_base_v1.stl" scale="1 1 1" inertia="convex" />
+    <mesh name="so101_rotation_pitch_so101_v1" file="assets/so101_rotation_pitch_so101_v1.stl" scale="1 1 1" inertia="convex" />
+    <mesh name="so101_upper_arm_so101_v1" file="assets/so101_upper_arm_so101_v1.stl" scale="1 1 1" inertia="convex" />
+    <mesh name="so101_under_arm_so101_v1" file="assets/so101_under_arm_so101_v1.stl" scale="1 1 1" inertia="convex" />
+    <mesh name="so101_motor_holder_so101_wrist_v1" file="assets/so101_motor_holder_so101_wrist_v1.stl" scale="1 1 1" inertia="convex" />
+    <mesh name="so101_sts3215_03a_no_horn_v1" file="assets/so101_sts3215_03a_no_horn_v1.stl" scale="1 1 1" inertia="convex" />
+    <mesh name="so101_wrist_roll_pitch_so101_v2" file="assets/so101_wrist_roll_pitch_so101_v2.stl" scale="1 1 1" inertia="convex" />
+    <mesh name="so101_wrist_roll_follower_so101_v1" file="assets/so101_wrist_roll_follower_so101_v1.stl" scale="1 1 1" inertia="convex" />
+    <mesh name="so101_moving_jaw_so101_v1" file="assets/so101_moving_jaw_so101_v1.stl" scale="1 1 1" inertia="convex" />
+  </asset>
+  <worldbody>
+    <light pos="1 -1 3" dir="-0.2 0.2 -1" diffuse="0.8 0.8 0.8" />
+    <light pos="-1 1 2" dir="0.2 -0.2 -1" diffuse="0.5 0.5 0.5" />
+    <geom name="ground" type="plane" size="2 2 0.1" rgba="0.25 0.28 0.3 1" solref="0.005 1" />
+    <body name="base_link" pos="0 0 0.22859950416644" quat="1 0 0 0">
+      <freejoint name="x500_free" />
+      <inertial mass="1.99999999969" pos="0 0 0" fullinertia="0.0216666666633 0.0216666666633 0.0399999999938 0 0 0" />
+      <geom name="x500_base_link_visual_0" type="mesh" mesh="NXP-HGD-CF_LandingFoam_0" material="NXP-HGD-CF_LandingFoam-material" pos="0 0 0.025" quat="-2.05103428515e-10 -0 0 1" contype="0" conaffinity="0" group="2" />
+      <geom name="x500_base_link_visual_1" type="mesh" mesh="NXP-HGD-CF_LandingRubber_1" material="NXP-HGD-CF_LandingRubber-material" pos="0 0 0.025" quat="-2.05103428515e-10 -0 0 1" contype="0" conaffinity="0" group="2" />
+      <geom name="x500_base_link_visual_2" type="mesh" mesh="NXP-HGD-CF_CarbonFiber_2" material="NXP-HGD-CF_CarbonFiber-material" pos="0 0 0.025" quat="-2.05103428515e-10 -0 0 1" contype="0" conaffinity="0" group="2" />
+      <geom name="x500_base_link_visual_3" type="mesh" mesh="NXP-HGD-CF_Metal_3" material="NXP-HGD-CF_Metal-material" pos="0 0 0.025" quat="-2.05103428515e-10 -0 0 1" contype="0" conaffinity="0" group="2" />
+      <geom name="x500_base_link_visual_4" type="mesh" mesh="NXP-HGD-CF_RailsRubber_4" material="NXP-HGD-CF_RailsRubber-material" pos="0 0 0.025" quat="-2.05103428515e-10 -0 0 1" contype="0" conaffinity="0" group="2" />
+      <geom name="x500_base_link_visual_5" type="mesh" mesh="NXP-HGD-CF_FMUK66_5" material="NXP-HGD-CF_FMUK66-material" pos="0 0 0.025" quat="-2.05103428515e-10 -0 0 1" contype="0" conaffinity="0" group="2" />
+      <geom name="x500_base_link_visual_6" type="mesh" mesh="NXP-HGD-CF_RailsAntennaHolder_6" material="NXP-HGD-CF_RailsAntennaHolder-material" pos="0 0 0.025" quat="-2.05103428515e-10 -0 0 1" contype="0" conaffinity="0" group="2" />
+      <geom name="x500_base_link_visual_7" type="mesh" mesh="NXP-HGD-CF_LandingPlastic_7" material="NXP-HGD-CF_LandingPlastic-material" pos="0 0 0.025" quat="-2.05103428515e-10 -0 0 1" contype="0" conaffinity="0" group="2" />
+      <geom name="x500_base_link_visual_8" type="mesh" mesh="NXP-HGD-CF_FMURubber_8" material="NXP-HGD-CF_FMURubber-material" pos="0 0 0.025" quat="-2.05103428515e-10 -0 0 1" contype="0" conaffinity="0" group="2" />
+      <geom name="x500_5010_motor_base_0_0" type="mesh" mesh="5010Base_Stator_0" material="5010Base_Material_003-material" pos="0.174 0.174 0.032" quat="0.974794107069 0 0 -0.223106362132" contype="0" conaffinity="0" group="2" />
+      <geom name="x500_5010_motor_base_1_0" type="mesh" mesh="5010Base_Stator_0" material="5010Base_Material_003-material" pos="-0.174 0.174 0.032" quat="0.974794107069 0 0 -0.223106362132" contype="0" conaffinity="0" group="2" />
+      <geom name="x500_5010_motor_base_2_0" type="mesh" mesh="5010Base_Stator_0" material="5010Base_Material_003-material" pos="0.174 -0.174 0.032" quat="0.974794107069 0 0 -0.223106362132" contype="0" conaffinity="0" group="2" />
+      <geom name="x500_5010_motor_base_3_0" type="mesh" mesh="5010Base_Stator_0" material="5010Base_Material_003-material" pos="-0.174 -0.174 0.032" quat="0.974794107069 0 0 -0.223106362132" contype="0" conaffinity="0" group="2" />
+      <geom name="x500_NXP_FMUK66_FRONT" type="box" size="0.0065 0.0035 1e-05" material="x500_NXP_FMUK66_FRONT_material" pos="0.047 0.001 0.043" quat="0.620791609507 0.339140001948 0.33887004315 0.620297453243" contype="0" conaffinity="0" group="2" />
+      <geom name="x500_NXP_FMUK66_TOP" type="box" size="0.0065 0.0035 1e-05" material="x500_NXP_FMUK66_TOP_material" pos="-0.023 0 0.0515" quat="0.707388269167 0 0 -0.706825181105" contype="0" conaffinity="0" group="2" />
+      <geom name="x500_RDDRONE_FMUK66_TOP" type="box" size="0.016 0.0017 1e-05" material="x500_RDDRONE_FMUK66_TOP_material" pos="-0.03 0 0.0515" quat="0.707388269167 0 0 -0.706825181105" contype="0" conaffinity="0" group="2" />
+      <geom name="x500_base_link_collision_0" type="box" size="0.176776695297 0.176776695297 0.025" pos="0 0 0.007" quat="1 0 0 0" contype="1" conaffinity="1" group="3" solref="0.005 1" />
+      <geom name="x500_base_link_collision_1" type="box" size="0.0075 0.0075 0.105" pos="0 -0.098 -0.123" quat="0.984726538905 -0.174108137594 0 0" contype="1" conaffinity="1" group="3" solref="0.005 1" />
+      <geom name="x500_base_link_collision_2" type="box" size="0.0075 0.0075 0.105" pos="0 0.098 -0.123" quat="0.984726538905 0.174108137594 0 0" contype="1" conaffinity="1" group="3" solref="0.005 1" />
+      <geom name="x500_base_link_collision_3" type="box" size="0.125 0.0075 0.0075" pos="0 -0.132 -0.2195" quat="1 0 0 0" contype="1" conaffinity="1" group="3" margin="0.00079950416643959" solref="0.005 1" />
+      <geom name="x500_base_link_collision_4" type="box" size="0.125 0.0075 0.0075" pos="0 0.132 -0.2195" quat="1 0 0 0" contype="1" conaffinity="1" group="3" margin="0.00079950416643959" solref="0.005 1" />
+      <body name="rotor_0" pos="0.174 -0.174 0.06" quat="1 0 0 0">
+        <inertial mass="0.016076923076923075" pos="0 0 0" fullinertia="3.8464910484e-07 2.61158516917e-05 2.64985823471e-05 0 0 0" />
+        <joint name="rotor_0_joint" type="hinge" axis="0 0 1" limited="true" range="-1e+16 1e+16" />
+        <geom name="x500_rotor_0_visual" type="mesh" mesh="x500_1345_prop_ccw" rgba="0.12 0.12 0.14 1" pos="-0.022 -0.146384615385 -0.016" quat="1 0 0 0" contype="0" conaffinity="0" group="2" />
+        <geom name="x500_rotor_0_visual_motor_bell_0" type="mesh" mesh="5010Bell_Bellside_0" material="5010Bell_Material_002-material" pos="0 0 -0.032" quat="1 0 0 0" contype="0" conaffinity="0" group="2" />
+        <geom name="x500_rotor_0_visual_motor_bell_1" type="mesh" mesh="5010Bell_BellHead_001_1" material="5010Bell_Material_001-material" pos="0 0 -0.032" quat="1 0 0 0" contype="0" conaffinity="0" group="2" />
+        <geom name="x500_rotor_0_collision" type="box" size="0.139615384615 0.00846153846154 0.000423076923077" pos="0 0 0" quat="1 0 0 0" contype="1" conaffinity="1" group="3" solref="0.005 1" />
+        <site name="x500_rotor_0_aero_site" pos="0 0 0" quat="1 0 0 0" size="0.004" group="4" />
+      </body>
+      <body name="rotor_1" pos="-0.174 0.174 0.06" quat="1 0 0 0">
+        <inertial mass="0.016076923076923075" pos="0 0 0" fullinertia="3.8464910484e-07 2.61158516917e-05 2.64985823471e-05 0 0 0" />
+        <joint name="rotor_1_joint" type="hinge" axis="0 0 1" limited="true" range="-1e+16 1e+16" />
+        <geom name="x500_rotor_1_visual" type="mesh" mesh="x500_1345_prop_ccw" rgba="0.12 0.12 0.14 1" pos="-0.022 -0.146384615385 -0.016" quat="1 0 0 0" contype="0" conaffinity="0" group="2" />
+        <geom name="x500_rotor_1_visual_motor_top_0" type="mesh" mesh="5010Bell_Bellside_0" material="5010Bell_Material_002-material" pos="0 0 -0.032" quat="1 0 0 0" contype="0" conaffinity="0" group="2" />
+        <geom name="x500_rotor_1_visual_motor_top_1" type="mesh" mesh="5010Bell_BellHead_001_1" material="5010Bell_Material_001-material" pos="0 0 -0.032" quat="1 0 0 0" contype="0" conaffinity="0" group="2" />
+        <geom name="x500_rotor_1_collision" type="box" size="0.139615384615 0.00846153846154 0.000423076923077" pos="0 0 0" quat="1 0 0 0" contype="1" conaffinity="1" group="3" solref="0.005 1" />
+        <site name="x500_rotor_1_aero_site" pos="0 0 0" quat="1 0 0 0" size="0.004" group="4" />
+      </body>
+      <body name="rotor_2" pos="0.174 0.174 0.06" quat="1 0 0 0">
+        <inertial mass="0.016076923076923075" pos="0 0 0" fullinertia="3.8464910484e-07 2.61158516917e-05 2.64985823471e-05 0 0 0" />
+        <joint name="rotor_2_joint" type="hinge" axis="0 0 1" limited="true" range="-1e+16 1e+16" />
+        <geom name="x500_rotor_2_visual" type="mesh" mesh="x500_1345_prop_cw" rgba="0.12 0.12 0.14 1" pos="-0.022 -0.146384615385 -0.016" quat="1 0 0 0" contype="0" conaffinity="0" group="2" />
+        <geom name="x500_rotor_2_visual_motor_top_0" type="mesh" mesh="5010Bell_Bellside_0" material="5010Bell_Material_002-material" pos="0 0 -0.032" quat="1 0 0 0" contype="0" conaffinity="0" group="2" />
+        <geom name="x500_rotor_2_visual_motor_top_1" type="mesh" mesh="5010Bell_BellHead_001_1" material="5010Bell_Material_001-material" pos="0 0 -0.032" quat="1 0 0 0" contype="0" conaffinity="0" group="2" />
+        <geom name="x500_rotor_2_collision" type="box" size="0.139615384615 0.00846153846154 0.000423076923077" pos="0 0 0" quat="1 0 0 0" contype="1" conaffinity="1" group="3" solref="0.005 1" />
+        <site name="x500_rotor_2_aero_site" pos="0 0 0" quat="1 0 0 0" size="0.004" group="4" />
+      </body>
+      <body name="rotor_3" pos="-0.174 -0.174 0.06" quat="1 0 0 0">
+        <inertial mass="0.016076923076923075" pos="0 0 0" fullinertia="3.8464910484e-07 2.61158516917e-05 2.64985823471e-05 0 0 0" />
+        <joint name="rotor_3_joint" type="hinge" axis="0 0 1" limited="true" range="-1e+16 1e+16" />
+        <geom name="x500_rotor_3_visual" type="mesh" mesh="x500_1345_prop_cw" rgba="0.12 0.12 0.14 1" pos="-0.022 -0.146384615385 -0.016" quat="1 0 0 0" contype="0" conaffinity="0" group="2" />
+        <geom name="x500_rotor_3_visual_motor_top_0" type="mesh" mesh="5010Bell_Bellside_0" material="5010Bell_Material_002-material" pos="0 0 -0.032" quat="1 0 0 0" contype="0" conaffinity="0" group="2" />
+        <geom name="x500_rotor_3_visual_motor_top_1" type="mesh" mesh="5010Bell_BellHead_001_1" material="5010Bell_Material_001-material" pos="0 0 -0.032" quat="1 0 0 0" contype="0" conaffinity="0" group="2" />
+        <geom name="x500_rotor_3_collision" type="box" size="0.139615384615 0.00846153846154 0.000423076923077" pos="0 0 0" quat="1 0 0 0" contype="1" conaffinity="1" group="3" solref="0.005 1" />
+        <site name="x500_rotor_3_aero_site" pos="0 0 0" quat="1 0 0 0" size="0.004" group="4" />
+      </body>
+      <body name="so101_base" pos="0.00647949033685 -0.0207909 -0.0175325197323" quat="4.32978028118e-17 0.707106781187 0.707106781187 4.32978028118e-17">
+        <inertial mass="0.147" pos="0.020739 0.00204287 0.065966" fullinertia="0.000136117 0.000114686 0.000130364 4.59787e-07 9.75275e-08 -4.97151e-06" />
+        <geom name="so101_base_visual_0" type="mesh" mesh="so101_base_motor_holder_so101_v1" pos="0.0206915 0.0221255 0.0300817" quat="0.707105482511 0.707108079859 7.80492270859e-16 8.68106137189e-16" group="2" contype="0" conaffinity="0" material="so101_3d_printed" />
+        <geom name="so101_base_visual_1" type="mesh" mesh="so101_base_so101_v2" pos="0.0207909 0.0221255 0.0300817" quat="0.707105482511 0.707108079859 0 0" group="2" contype="0" conaffinity="0" material="so101_3d_printed" />
+        <geom name="so101_base_visual_2" type="mesh" mesh="so101_sts3215_03a_v1" pos="0.0207909 -0.0105745 0.0761817" quat="0.707105482511 -7.68999944982e-16 7.88628978703e-16 -0.707108079859" group="2" contype="0" conaffinity="0" material="so101_sts3215" />
+        <geom name="so101_base_visual_3" type="mesh" mesh="so101_waveshare_mounting_plate_so101_v2" pos="0.0205915 0.0467435 0.0798817" quat="0.707105482511 0.707108079859 -3.47900190799e-15 5.12761596206e-15" group="2" contype="0" conaffinity="0" material="so101_3d_printed" />
+        <geom name="so101_base_collision_0" type="mesh" mesh="so101_base_motor_holder_so101_v1" pos="0.0206915 0.0221255 0.0300817" quat="0.707105482511 0.707108079859 7.80492270859e-16 8.68106137189e-16" group="3" contype="2" conaffinity="3" solref="0.005 1" />
+        <geom name="so101_base_collision_1" type="mesh" mesh="so101_base_so101_v2" pos="0.0207909 0.0221255 0.0300817" quat="0.707105482511 0.707108079859 0 0" group="3" contype="2" conaffinity="3" solref="0.005 1" />
+        <geom name="so101_base_collision_2" type="mesh" mesh="so101_sts3215_03a_v1" pos="0.0207909 -0.0105745 0.0761817" quat="0.707105482511 -7.68999944982e-16 7.88628978703e-16 -0.707108079859" group="3" contype="2" conaffinity="3" solref="0.005 1" />
+        <geom name="so101_base_collision_3" type="mesh" mesh="so101_waveshare_mounting_plate_so101_v2" pos="0.0205915 0.0467435 0.0798817" quat="0.707105482511 0.707108079859 -3.47900190799e-15 5.12761596206e-15" group="3" contype="2" conaffinity="3" solref="0.005 1" />
+        <body name="so101_shoulder" pos="0.0207909 -0.0230745 0.0948817" quat="-2.303931158737e-07 0.98480743408702 0.17364998636675 -1.3066383240993e-06">
+          <inertial mass="0.100006" pos="-0.0307604 -1.66727e-05 -0.0252713" fullinertia="8.3759e-05 8.10403e-05 2.39783e-05 7.55525e-08 -1.16342e-06 1.54663e-07" />
+          <joint name="so101_shoulder_pan" type="hinge" pos="0 0 0" axis="0 0 1" ref="1.221730476396" limited="true" range="-1.91986 1.91986" solreflimit="0.003 1" margin="0.017453292519943" />
+          <geom name="so101_shoulder_visual_0" type="mesh" mesh="so101_sts3215_03a_v1" pos="-0.0303992 0.000422241 -0.0417" quat="0.499998163397 0.499999999997 0.499999999997 -0.500001836603" group="2" contype="0" conaffinity="0" material="so101_sts3215" />
+          <geom name="so101_shoulder_visual_1" type="mesh" mesh="so101_motor_holder_so101_base_v1" pos="-0.0675992 -0.000177759 0.0158499" quat="0.499998163397 0.499999999997 -0.499999999997 0.500001836603" group="2" contype="0" conaffinity="0" material="so101_3d_printed" />
+          <geom name="so101_shoulder_visual_2" type="mesh" mesh="so101_rotation_pitch_so101_v1" pos="0.0122008 2.22413e-05 0.0464" quat="0.707105482511 -0.707108079859 -0 0" group="2" contype="0" conaffinity="0" material="so101_3d_printed" />
+          <geom name="so101_shoulder_collision_0" type="mesh" mesh="so101_sts3215_03a_v1" pos="-0.0303992 0.000422241 -0.0417" quat="0.499998163397 0.499999999997 0.499999999997 -0.500001836603" group="3" contype="2" conaffinity="3" solref="0.005 1" />
+          <geom name="so101_shoulder_collision_1" type="mesh" mesh="so101_motor_holder_so101_base_v1" pos="-0.0675992 -0.000177759 0.0158499" quat="0.499998163397 0.499999999997 -0.499999999997 0.500001836603" group="3" contype="2" conaffinity="3" solref="0.005 1" />
+          <geom name="so101_shoulder_collision_2" type="mesh" mesh="so101_rotation_pitch_so101_v1" pos="0.0122008 2.22413e-05 0.0464" quat="0.707105482511 -0.707108079859 -0 0" group="3" contype="2" conaffinity="3" solref="0.005 1" />
+          <body name="so101_upper_arm" pos="-0.0303992 -0.0182778 -0.0542" quat="0.50434604978558 -0.50434422927658 -0.49561769378071 -0.49561584122442">
+            <inertial mass="0.103" pos="-0.00838224 0.0898471 0.0184089" fullinertia="0.000147318 4.08002e-05 0.000142487 1.97819e-05 8.97326e-09 4.03016e-08" />
+            <joint name="so101_shoulder_lift" type="hinge" pos="0 0 0" axis="0 0 1" ref="-3.1241393610699" limited="true" range="-3.31613 0.174533" solreflimit="0.003 1" margin="0.017453292519943" />
+            <geom name="so101_upper_arm_visual_0" type="mesh" mesh="so101_sts3215_03a_v1" pos="-0.0155 0.11257 0.0187" quat="1.75877140285e-12 -1.32679489668e-06 0.999999999998 -1.32679489668e-06" group="2" contype="0" conaffinity="0" material="so101_sts3215" />
+            <geom name="so101_upper_arm_visual_1" type="mesh" mesh="so101_upper_arm_so101_v1" pos="0.012 0.065085 0.0182" quat="9.3818394604e-07 0.707105482511 -0.707108079859 -9.38187391325e-07" group="2" contype="0" conaffinity="0" material="so101_3d_printed" />
+            <geom name="so101_upper_arm_collision_0" type="mesh" mesh="so101_sts3215_03a_v1" pos="-0.0155 0.11257 0.0187" quat="1.75877140285e-12 -1.32679489668e-06 0.999999999998 -1.32679489668e-06" group="3" contype="2" conaffinity="3" solref="0.005 1" />
+            <geom name="so101_upper_arm_collision_1" type="mesh" mesh="so101_upper_arm_so101_v1" pos="0.012 0.065085 0.0182" quat="9.3818394604e-07 0.707105482511 -0.707108079859 -9.38187391325e-07" group="3" contype="2" conaffinity="3" solref="0.005 1" />
+            <body name="so101_lower_arm" pos="-0.028 0.11257 1.24466e-16" quat="0.99984771831128 -9.7390388639522e-16 1.6292602627248e-15 -0.017451079844449">
+              <inertial mass="0.104" pos="-0.00324376 -0.0980701 0.0182831" fullinertia="0.000159844 2.87438e-05 0.00014529 -7.41152e-06 4.90188e-08 1.26409e-06" />
+              <joint name="so101_elbow_flex" type="hinge" pos="0 0 0" axis="0 0 1" ref="3.1066860685499" limited="true" range="-0.174533 3.14159" solreflimit="0.003 1" margin="0.017453292519943" />
+              <geom name="so101_lower_arm_visual_0" type="mesh" mesh="so101_under_arm_so101_v1" pos="0.032 -0.0648499 0.0182" quat="9.38183945569e-07 0.707105482511 0.707108079859 9.38187391796e-07" group="2" contype="0" conaffinity="0" material="so101_3d_printed" />
+              <geom name="so101_lower_arm_visual_1" type="mesh" mesh="so101_motor_holder_so101_wrist_v1" pos="0.032 -0.0648499 0.018" quat="9.38183945648e-07 -0.707105482511 -0.707108079859 9.38187391718e-07" group="2" contype="0" conaffinity="0" material="so101_3d_printed" />
+              <geom name="so101_lower_arm_visual_2" type="mesh" mesh="so101_sts3215_03a_v1" pos="-0.0052 -0.1224 0.0187" quat="9.38183948523e-07 0.707105482511 -0.707108079859 -9.38187388843e-07" group="2" contype="0" conaffinity="0" material="so101_sts3215" />
+              <geom name="so101_lower_arm_collision_0" type="mesh" mesh="so101_under_arm_so101_v1" pos="0.032 -0.0648499 0.0182" quat="9.38183945569e-07 0.707105482511 0.707108079859 9.38187391796e-07" group="3" contype="2" conaffinity="3" solref="0.005 1" />
+              <geom name="so101_lower_arm_collision_1" type="mesh" mesh="so101_motor_holder_so101_wrist_v1" pos="0.032 -0.0648499 0.018" quat="9.38183945648e-07 -0.707105482511 -0.707108079859 9.38187391718e-07" group="3" contype="2" conaffinity="3" solref="0.005 1" />
+              <geom name="so101_lower_arm_collision_2" type="mesh" mesh="so101_sts3215_03a_v1" pos="-0.0052 -0.1224 0.0187" quat="9.38183948523e-07 0.707105482511 -0.707108079859 -9.38187388843e-07" group="3" contype="2" conaffinity="3" solref="0.005 1" />
+              <body name="so101_wrist" pos="-0.0052 -0.1349 3.40439e-16" quat="0.83867056588626 7.3217648006537e-16 2.4432114080454e-15 0.54463903818586">
+                <inertial mass="0.079" pos="-0.000103312 -0.0386143 0.0281156" fullinertia="3.68263e-05 2.5391e-05 2.1e-05 1.7893e-08 -5.28128e-08 3.6412e-06" />
+                <joint name="so101_wrist_flex" type="hinge" pos="0 0 0" axis="0 0 1" ref="1.1519173063163" limited="true" range="-1.65806 1.65806" solreflimit="0.003 1" margin="0.017453292519943" />
+                <geom name="so101_wrist_visual_0" type="mesh" mesh="so101_sts3215_03a_no_horn_v1" pos="0 -0.0424 0.0306" quat="0.499998163397 0.499999999997 0.499999999997 -0.500001836603" group="2" contype="0" conaffinity="0" material="so101_sts3215" />
+                <geom name="so101_wrist_visual_1" type="mesh" mesh="so101_wrist_roll_pitch_so101_v2" pos="-2.77556e-17 -0.028 0.0181" quat="0.499998163397 -0.499999999997 -0.499999999997 -0.500001836603" group="2" contype="0" conaffinity="0" material="so101_3d_printed" />
+                <geom name="so101_wrist_collision_0" type="mesh" mesh="so101_sts3215_03a_no_horn_v1" pos="0 -0.0424 0.0306" quat="0.499998163397 0.499999999997 0.499999999997 -0.500001836603" group="3" contype="2" conaffinity="3" solref="0.005 1" />
+                <geom name="so101_wrist_collision_1" type="mesh" mesh="so101_wrist_roll_pitch_so101_v2" pos="-2.77556e-17 -0.028 0.0181" quat="0.499998163397 -0.499999999997 -0.499999999997 -0.500001836603" group="3" contype="2" conaffinity="3" solref="0.005 1" />
+                <body name="so101_gripper" pos="2.77556e-17 -0.0611 0.0181" quat="0.54167364384218 -0.54167683963435 -0.45451956834243 -0.45451933618306">
+                  <inertial mass="0.087" pos="0.000213627 0.000245138 -0.025187" fullinertia="2.75087e-05 4.33657e-05 3.45059e-05 -3.35241e-07 -5.7352e-06 -5.17847e-08" />
+                  <joint name="so101_wrist_roll" type="hinge" pos="0 0 0" axis="0 0 1" ref="1.7453292519943" limited="true" range="-2.79253 2.79253" solreflimit="0.003 1" margin="0.017453292519943" />
+                  <geom name="so101_gripper_visual_0" type="mesh" mesh="so101_sts3215_03a_v1" pos="0.0077 0.0001 -0.0234" quat="0.707105482511 -0.707108079859 4.86695031515e-15 -4.90618471174e-15" group="2" contype="0" conaffinity="0" material="so101_sts3215" />
+                  <geom name="so101_gripper_visual_1" type="mesh" mesh="so101_wrist_roll_follower_so101_v1" pos="1.11022e-16 -0.000218214 0.000949706" quat="1.32679489668e-06 -0.999999999999 -3.37119234342e-23 -2.77556e-17" group="2" contype="0" conaffinity="0" material="so101_3d_printed" />
+                  <geom name="so101_gripper_collision_0" type="mesh" mesh="so101_sts3215_03a_v1" pos="0.0077 0.0001 -0.0234" quat="0.707105482511 -0.707108079859 4.86695031515e-15 -4.90618471174e-15" group="3" contype="2" conaffinity="3" solref="0.005 1" />
+                  <geom name="so101_gripper_collision_1" type="mesh" mesh="so101_wrist_roll_follower_so101_v1" pos="1.11022e-16 -0.000218214 0.000949706" quat="1.32679489668e-06 -0.999999999999 -3.37119234342e-23 -2.77556e-17" group="3" contype="2" conaffinity="3" solref="0.005 1" />
+                  <body name="so101_jaw" pos="0.0202 0.0188 -0.0234" quat="0.70710548251135 0.70710807985936 -8.6113203411515e-17 7.217578484192e-18">
+                    <inertial mass="0.012" pos="-0.00157495 -0.0300244 0.0192755" fullinertia="6.61427e-06 1.89032e-06 5.28738e-06 -3.19807e-07 -5.90717e-09 -1.09945e-07" />
+                    <joint name="so101_gripper" type="hinge" pos="0 0 0" axis="0 0 1" ref="0" limited="true" range="-0.174533 1.74533" solreflimit="0.003 1" margin="0.017453292519943" />
+                    <geom name="so101_jaw_visual_0" type="mesh" mesh="so101_moving_jaw_so101_v1" pos="0 1.89351e-17 0.0189" quat="1 4.765725e-17 -6.03715e-24 2.87713966838e-40" group="2" contype="0" conaffinity="0" material="so101_3d_printed" />
+                    <geom name="so101_jaw_collision_0" type="mesh" mesh="so101_moving_jaw_so101_v1" pos="0 1.89351e-17 0.0189" quat="1 4.765725e-17 -6.03715e-24 2.87713966838e-40" group="3" contype="2" conaffinity="3" solref="0.005 1" />
+                  </body>
+                  <site name="so101_pad_reference" pos="0 0 -0.0994373238627459" size="0.003" group="4" rgba="0.1 0.8 0.2 1" />
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <site name="x500_imu_site" pos="0 0 0" size="0.004" group="4" />
+      <site name="x500_rotor_0_force_site" pos="0.174 -0.174 0.06" quat="1 0 0 0" size="0.004" group="4" rgba="0.2 0.8 0.2 1" />
+      <site name="x500_rotor_1_force_site" pos="-0.174 0.174 0.06" quat="1 0 0 0" size="0.004" group="4" rgba="0.2 0.8 0.2 1" />
+      <site name="x500_rotor_2_force_site" pos="0.174 0.174 0.06" quat="1 0 0 0" size="0.004" group="4" rgba="0.2 0.8 0.2 1" />
+      <site name="x500_rotor_3_force_site" pos="-0.174 -0.174 0.06" quat="1 0 0 0" size="0.004" group="4" rgba="0.2 0.8 0.2 1" />
+    </body>
+  </worldbody>
+  <contact>
+    <exclude body1="base_link" body2="rotor_0" />
+    <exclude body1="base_link" body2="rotor_1" />
+    <exclude body1="base_link" body2="rotor_2" />
+    <exclude body1="base_link" body2="rotor_3" />
+    <exclude body1="rotor_0" body2="rotor_1" />
+    <exclude body1="rotor_0" body2="rotor_2" />
+    <exclude body1="rotor_0" body2="rotor_3" />
+    <exclude body1="rotor_1" body2="rotor_2" />
+    <exclude body1="rotor_1" body2="rotor_3" />
+    <exclude body1="rotor_2" body2="rotor_3" />
+  </contact>
+  <actuator>
+    <position name="so101_shoulder_pan_hold" joint="so101_shoulder_pan" kp="8.0" kv="0.27" gear="1" ctrllimited="true" ctrlrange="-1.91986 1.91986" forcelimited="true" forcerange="-0.4 0.4" />
+    <position name="so101_shoulder_lift_hold" joint="so101_shoulder_lift" kp="12.0" kv="0.32" gear="1" ctrllimited="true" ctrlrange="-3.31613 0.174533" forcelimited="true" forcerange="-1 1" />
+    <position name="so101_elbow_flex_hold" joint="so101_elbow_flex" kp="30.0" kv="0.9" gear="1" ctrllimited="true" ctrlrange="-0.174533 3.14159" forcelimited="true" forcerange="-1.2 1.2" />
+    <position name="so101_wrist_flex_hold" joint="so101_wrist_flex" kp="6.0" kv="0.16" gear="1" ctrllimited="true" ctrlrange="-1.65806 1.65806" forcelimited="true" forcerange="-0.35 0.35" />
+    <position name="so101_wrist_roll_hold" joint="so101_wrist_roll" kp="1.0" kv="0.013" gear="1" ctrllimited="true" ctrlrange="-2.79253 2.79253" forcelimited="true" forcerange="-0.15 0.15" />
+    <position name="so101_gripper_hold" joint="so101_gripper" kp="0.5" kv="0.006" gear="1" ctrllimited="true" ctrlrange="-0.174533 1.74533" forcelimited="true" forcerange="-0.08 0.08" />
+    <motor name="x500_rotor_0_shaft_motor" joint="rotor_0_joint" gear="1" ctrllimited="true" ctrlrange="-2.26 2.26" forcelimited="true" forcerange="-2.26 2.26" />
+    <motor name="x500_rotor_1_shaft_motor" joint="rotor_1_joint" gear="1" ctrllimited="true" ctrlrange="-2.26 2.26" forcelimited="true" forcerange="-2.26 2.26" />
+    <motor name="x500_rotor_2_shaft_motor" joint="rotor_2_joint" gear="1" ctrllimited="true" ctrlrange="-2.26 2.26" forcelimited="true" forcerange="-2.26 2.26" />
+    <motor name="x500_rotor_3_shaft_motor" joint="rotor_3_joint" gear="1" ctrllimited="true" ctrlrange="-2.26 2.26" forcelimited="true" forcerange="-2.26 2.26" />
+    <general name="x500_rotor_0_aerodynamics" site="x500_rotor_0_aero_site" gear="0 0 1 0 0 -0.016" ctrllimited="true" ctrlrange="-8.54858 8.54858" forcelimited="true" forcerange="-8.54858 8.54858" />
+    <general name="x500_rotor_1_aerodynamics" site="x500_rotor_1_aero_site" gear="0 0 1 0 0 -0.016" ctrllimited="true" ctrlrange="-8.54858 8.54858" forcelimited="true" forcerange="-8.54858 8.54858" />
+    <general name="x500_rotor_2_aerodynamics" site="x500_rotor_2_aero_site" gear="0 0 1 0 0 0.016" ctrllimited="true" ctrlrange="-8.54858 8.54858" forcelimited="true" forcerange="-8.54858 8.54858" />
+    <general name="x500_rotor_3_aerodynamics" site="x500_rotor_3_aero_site" gear="0 0 1 0 0 0.016" ctrllimited="true" ctrlrange="-8.54858 8.54858" forcelimited="true" forcerange="-8.54858 8.54858" />
+  </actuator>
+  <sensor>
+    <gyro name="imu_angular_velocity" site="x500_imu_site" />
+    <accelerometer name="imu_linear_acceleration" site="x500_imu_site" />
+  </sensor>
+  <custom>
+    <numeric name="source_so101_shoulder_pan_effort_velocity" data="10 10" />
+    <numeric name="source_so101_shoulder_lift_effort_velocity" data="10 10" />
+    <numeric name="source_so101_elbow_flex_effort_velocity" data="10 10" />
+    <numeric name="source_so101_wrist_flex_effort_velocity" data="10 10" />
+    <numeric name="source_so101_wrist_roll_effort_velocity" data="10 10" />
+    <numeric name="source_so101_gripper_effort_velocity" data="10 10" />
+    <numeric name="x500_rotor_0_motor_parameters" data="8.54858e-06 0.016 1000 0.0125 0.025 1" />
+    <numeric name="x500_rotor_1_motor_parameters" data="8.54858e-06 0.016 1000 0.0125 0.025 1" />
+    <numeric name="x500_rotor_2_motor_parameters" data="8.54858e-06 0.016 1000 0.0125 0.025 -1" />
+    <numeric name="x500_rotor_3_motor_parameters" data="8.54858e-06 0.016 1000 0.0125 0.025 -1" />
+    <numeric name="approved_shaft_torque_limit_Nm" data="2.26" />
+    <numeric name="outer_control_period_s" data="0.004" />
+    <text name="shaft_torque_basis" data="User approved simulation-only +/-2.26 Nm with active braking; not a verified hardware motor rating." />
+  </custom>
+  <keyframe>
+    <key name="arm_sequence_ready" qpos="0 0 0.22859950416644 1 0 0 0 0 0 0 0 1.221730476396 -3.1241393610699 3.1066860685499 1.1519173063163 1.7453292519943 0" qvel="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" ctrl="1.221730476396 -3.1241393610699 3.1066860685499 1.1519173063163 1.7453292519943 0 0 0 0 0 0 0 0 0" />
+  </keyframe>
+</mujoco>

@@ -1,0 +1,777 @@
+{
+  "model": "D:\\fangzhenmoxing\\fangzhenmoxing\\PX4\\x500_so101_mujoco\\PX4_X500_SO101.xml",
+  "source_sha256": {
+    "D:\\fangzhenmoxing\\fangzhenmoxing\\PX4\\models\\x500_base\\model.sdf": "4ebb77a77d3fe9088cef8508b2c156c14ae481bde41baf68d5cf08c25d8b7d4e",
+    "D:\\fangzhenmoxing\\fangzhenmoxing\\PX4\\models\\x500\\model.sdf": "cb76a4afd439f253a8c516b1fcd3528f80347619cfa46bebb620557054fbf125",
+    "D:\\fangzhenmoxing\\fangzhenmoxing\\Robotic Arm\\Lerobot-URDF\\so101.urdf": "566a282072dc2ef5ea2f48fc37973304b91692099635ad64593a5a885a61a8cb",
+    "D:\\fangzhenmoxing\\fangzhenmoxing\\PX4\\models\\x500_base\\meshes\\NXP-HGD-CF.dae": "7321861b113866996dfa79b403def5666d4b796810840d2c057c7b51fc315b0a",
+    "D:\\fangzhenmoxing\\fangzhenmoxing\\PX4\\models\\x500_base\\meshes\\CF.png": "3a56ec48eeaaf7774e8d3e8e5e88f6973bfa5652c610974c3eb2dbec6ec85944",
+    "D:\\fangzhenmoxing\\fangzhenmoxing\\PX4\\models\\x500_base\\meshes\\5010Base.dae": "798396a1945c7ff55a0840b77869e27affdd35fed0d784fff96b68f50f160ea0",
+    "D:\\fangzhenmoxing\\fangzhenmoxing\\PX4\\models\\x500_base\\meshes\\5010Bell.dae": "b90a1b2dd63a8ebbe1f3339ed18cef23673e0d8f03314fd9b9533a68b6b66668",
+    "D:\\fangzhenmoxing\\fangzhenmoxing\\Robotic Arm\\Lerobot-URDF\\assets\\base_so101_v2.stl": "bb12b7026575e1f70ccc7240051f9d943553bf34e5128537de6cd86fae33924d",
+    "D:\\fangzhenmoxing\\fangzhenmoxing\\Robotic Arm\\Lerobot-URDF\\assets\\base_motor_holder_so101_v1.stl": "8cd2f241037ea377af1191fffe0dd9d9006beea6dcc48543660ed41647072424",
+    "D:\\fangzhenmoxing\\fangzhenmoxing\\Robotic Arm\\Lerobot-URDF\\assets\\sts3215_03a_v1.stl": "a37c871fb502483ab96c256baf457d36f2e97afc9205313d9c5ab275ef941cd0",
+    "D:\\fangzhenmoxing\\fangzhenmoxing\\Robotic Arm\\Lerobot-URDF\\assets\\waveshare_mounting_plate_so101_v2.stl": "e197e24005a07d01bbc06a8c42311664eaeda415bf859f68fa247884d0f1a6e9",
+    "D:\\fangzhenmoxing\\fangzhenmoxing\\Robotic Arm\\Lerobot-URDF\\assets\\motor_holder_so101_base_v1.stl": "31242ae6fb59d8b15c66617b88ad8e9bded62d57c35d11c0c43a70d2f4caa95b",
+    "D:\\fangzhenmoxing\\fangzhenmoxing\\Robotic Arm\\Lerobot-URDF\\assets\\rotation_pitch_so101_v1.stl": "9be900cc2a2bf718102841ef82ef8d2873842427648092c8ed2ca1e2ef4ffa34",
+    "D:\\fangzhenmoxing\\fangzhenmoxing\\Robotic Arm\\Lerobot-URDF\\assets\\upper_arm_so101_v1.stl": "475056e03a17e71919b82fd88ab9a0b898ab50164f2a7943652a6b2941bb2d4f",
+    "D:\\fangzhenmoxing\\fangzhenmoxing\\Robotic Arm\\Lerobot-URDF\\assets\\under_arm_so101_v1.stl": "d01d1f2de365651dcad9d6669e94ff87ff7652b5bb2d10752a66a456a86dbc71",
+    "D:\\fangzhenmoxing\\fangzhenmoxing\\Robotic Arm\\Lerobot-URDF\\assets\\motor_holder_so101_wrist_v1.stl": "887f92e6013cb64ea3a1ab8675e92da1e0beacfd5e001f972523540545e08011",
+    "D:\\fangzhenmoxing\\fangzhenmoxing\\Robotic Arm\\Lerobot-URDF\\assets\\sts3215_03a_no_horn_v1.stl": "75ef3781b752e4065891aea855e34dc161a38a549549cd0970cedd07eae6f887",
+    "D:\\fangzhenmoxing\\fangzhenmoxing\\Robotic Arm\\Lerobot-URDF\\assets\\wrist_roll_pitch_so101_v2.stl": "6c7ec5525b4d8b9e397a30ab4bb0037156a5d5f38a4adf2c7d943d6c56eda5ae",
+    "D:\\fangzhenmoxing\\fangzhenmoxing\\Robotic Arm\\Lerobot-URDF\\assets\\wrist_roll_follower_so101_v1.stl": "4b17b410a12d64ec39554abc3e8054d8a97384b2dc4a8d95a5ecb2a93670f5f4",
+    "D:\\fangzhenmoxing\\fangzhenmoxing\\Robotic Arm\\Lerobot-URDF\\assets\\moving_jaw_so101_v1.stl": "785a9dded2f474bc1d869e0d3dae398a3dcd9c0c345640040472210d2861fa9d",
+    "D:\\fangzhenmoxing\\fangzhenmoxing\\PX4\\models\\x500_base\\materials\\textures\\nxp.png": "6c2262c84e0f5f55dbe38e712e6508d654fb6e7c427d1a19cdd62231bc2d52b1",
+    "D:\\fangzhenmoxing\\fangzhenmoxing\\PX4\\models\\x500_base\\materials\\textures\\rd.png": "9d8851c37dc612c336b46e41744c17fb8333a0af33ac4be93f7147f7549a8e25",
+    "D:\\fangzhenmoxing\\fangzhenmoxing\\PX4\\models\\x500_base\\meshes\\1345_prop_ccw.stl": "ba197e0961117a3462b555d65edf3433ba8ff5691624100a185242cb5f456244",
+    "D:\\fangzhenmoxing\\fangzhenmoxing\\PX4\\models\\x500_base\\meshes\\1345_prop_cw.stl": "7aa4b61c1ddc5304c9c1f5602eacf5e2ec5eafb95dd1f2a3368342f256122fc0"
+  },
+  "mount": {
+    "parent": "base_link",
+    "child": "so101_base",
+    "position": [
+      0.006479490336851016,
+      -0.0207909,
+      -0.017532519732262854
+    ],
+    "rpy": [
+      3.141592653589793,
+      0.0,
+      1.5707963267948966
+    ],
+    "quaternion_wxyz": [
+      4.329780281177467e-17,
+      0.7071067811865476,
+      0.7071067811865476,
+      4.329780281177467e-17
+    ],
+    "source_base_mount_face_center": [
+      0.0207909,
+      -0.00647949033685102,
+      0.03008144026773715
+    ],
+    "belly_surface_z": -0.04661396,
+    "clearance": 0.001,
+    "body_visual_pose": [
+      0.0,
+      0.0,
+      0.025,
+      0.0,
+      0.0,
+      3.141592654
+    ],
+    "base_bottom_face_xy_bounds": [
+      [
+        -0.03467159821782112,
+        -0.048584481023788255,
+        0.03008144026773715
+      ],
+      [
+        0.07625339821782112,
+        0.035625500350086214,
+        0.030081749588270507
+      ]
+    ]
+  },
+  "initial_posture": {
+    "arm_home": {
+      "shoulder_lift": -1.5707963267948966
+    },
+    "world_height": 0.64,
+    "arm_lowest_local_z": -0.5805842631585818
+  },
+  "dae_conversion": [
+    {
+      "name": "NXP-HGD-CF_LandingFoam_0",
+      "file": "assets/NXP-HGD-CF_LandingFoam_0.obj",
+      "material": "NXP-HGD-CF_LandingFoam-material",
+      "source_geometry": "#LandingFoam-mesh",
+      "source_file": "D:\\fangzhenmoxing\\fangzhenmoxing\\PX4\\models\\x500_base\\meshes\\NXP-HGD-CF.dae",
+      "vertices": 2496,
+      "triangles": 4992,
+      "removed_tiny_triangles": 0,
+      "bounds": [
+        [
+          -0.1126,
+          -0.142051,
+          -0.2525266
+        ],
+        [
+          0.112,
+          0.142551,
+          -0.2326724
+        ]
+      ],
+      "scene_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "NXP-HGD-CF_LandingRubber_1",
+      "file": "assets/NXP-HGD-CF_LandingRubber_1.obj",
+      "material": "NXP-HGD-CF_LandingRubber-material",
+      "source_geometry": "#LandingRubber-mesh",
+      "source_file": "D:\\fangzhenmoxing\\fangzhenmoxing\\PX4\\models\\x500_base\\meshes\\NXP-HGD-CF.dae",
+      "vertices": 2080,
+      "triangles": 4144,
+      "removed_tiny_triangles": 0,
+      "bounds": [
+        [
+          -0.1274487,
+          -0.1375755,
+          -0.2480838
+        ],
+        [
+          0.1268486,
+          0.1380755,
+          -0.2371153
+        ]
+      ],
+      "scene_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "NXP-HGD-CF_CarbonFiber_2",
+      "file": "assets/NXP-HGD-CF_CarbonFiber_2.obj",
+      "material": "NXP-HGD-CF_CarbonFiber-material",
+      "source_geometry": "#CarbonFiber-mesh",
+      "source_file": "D:\\fangzhenmoxing\\fangzhenmoxing\\PX4\\models\\x500_base\\meshes\\NXP-HGD-CF.dae",
+      "vertices": 13810,
+      "triangles": 28332,
+      "removed_tiny_triangles": 0,
+      "bounds": [
+        [
+          -0.1979682,
+          -0.1977717,
+          -0.2475631
+        ],
+        [
+          0.1977217,
+          0.1982717,
+          0.009269952
+        ]
+      ],
+      "scene_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "NXP-HGD-CF_Metal_3",
+      "file": "assets/NXP-HGD-CF_Metal_3.obj",
+      "material": "NXP-HGD-CF_Metal-material",
+      "source_geometry": "#Metal-mesh",
+      "source_file": "D:\\fangzhenmoxing\\fangzhenmoxing\\PX4\\models\\x500_base\\meshes\\NXP-HGD-CF.dae",
+      "vertices": 7096,
+      "triangles": 14328,
+      "removed_tiny_triangles": 0,
+      "bounds": [
+        [
+          -0.1973423,
+          -0.1971459,
+          -0.06961399
+        ],
+        [
+          0.197096,
+          0.197646,
+          -0.001999974
+        ]
+      ],
+      "scene_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "NXP-HGD-CF_RailsRubber_4",
+      "file": "assets/NXP-HGD-CF_RailsRubber_4.obj",
+      "material": "NXP-HGD-CF_RailsRubber-material",
+      "source_geometry": "#RailsRubber-mesh",
+      "source_file": "D:\\fangzhenmoxing\\fangzhenmoxing\\PX4\\models\\x500_base\\meshes\\NXP-HGD-CF.dae",
+      "vertices": 4160,
+      "triangles": 8320,
+      "removed_tiny_triangles": 0,
+      "bounds": [
+        [
+          -0.14895,
+          -0.04103147,
+          -0.05072647
+        ],
+        [
+          0.05605,
+          0.04103147,
+          -0.02850145
+        ]
+      ],
+      "scene_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "NXP-HGD-CF_FMUK66_5",
+      "file": "assets/NXP-HGD-CF_FMUK66_5.obj",
+      "material": "NXP-HGD-CF_FMUK66-material",
+      "source_geometry": "#FMUK66-mesh",
+      "source_file": "D:\\fangzhenmoxing\\fangzhenmoxing\\PX4\\models\\x500_base\\meshes\\NXP-HGD-CF.dae",
+      "vertices": 23460,
+      "triangles": 47328,
+      "removed_tiny_triangles": 96,
+      "bounds": [
+        [
+          -0.0506221,
+          -0.02595043,
+          0.009269952
+        ],
+        [
+          0.04303616,
+          0.02604955,
+          0.02635943
+        ]
+      ],
+      "scene_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "NXP-HGD-CF_RailsAntennaHolder_6",
+      "file": "assets/NXP-HGD-CF_RailsAntennaHolder_6.obj",
+      "material": "NXP-HGD-CF_RailsAntennaHolder-material",
+      "source_geometry": "#RailsAntennaHolder-mesh",
+      "source_file": "D:\\fangzhenmoxing\\fangzhenmoxing\\PX4\\models\\x500_base\\meshes\\NXP-HGD-CF.dae",
+      "vertices": 3442,
+      "triangles": 6872,
+      "removed_tiny_triangles": 16,
+      "bounds": [
+        [
+          0.06929999,
+          -0.0512036,
+          -0.05908882
+        ],
+        [
+          0.07729995,
+          0.05123156,
+          -0.031614
+        ]
+      ],
+      "scene_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "NXP-HGD-CF_LandingPlastic_7",
+      "file": "assets/NXP-HGD-CF_LandingPlastic_7.obj",
+      "material": "NXP-HGD-CF_LandingPlastic-material",
+      "source_geometry": "#LandingPlastic-mesh",
+      "source_file": "D:\\fangzhenmoxing\\fangzhenmoxing\\PX4\\models\\x500_base\\meshes\\NXP-HGD-CF.dae",
+      "vertices": 30178,
+      "triangles": 60426,
+      "removed_tiny_triangles": 10,
+      "bounds": [
+        [
+          -0.02029997,
+          -0.146262,
+          -0.2525995
+        ],
+        [
+          0.01969999,
+          0.146762,
+          -0.02636396
+        ]
+      ],
+      "scene_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "NXP-HGD-CF_FMURubber_8",
+      "file": "assets/NXP-HGD-CF_FMURubber_8.obj",
+      "material": "NXP-HGD-CF_FMURubber-material",
+      "source_geometry": "#FMURubber-mesh",
+      "source_file": "D:\\fangzhenmoxing\\fangzhenmoxing\\PX4\\models\\x500_base\\meshes\\NXP-HGD-CF.dae",
+      "vertices": 2076,
+      "triangles": 4136,
+      "removed_tiny_triangles": 0,
+      "bounds": [
+        [
+          -0.0371654,
+          -0.03526711,
+          -0.003499984
+        ],
+        [
+          0.03524631,
+          0.03618657,
+          0.01076996
+        ]
+      ],
+      "scene_matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "5010Base_Stator_0",
+      "file": "assets/5010Base_Stator_0.obj",
+      "material": "5010Base_Material_003-material",
+      "source_geometry": "#Body1_001-mesh",
+      "source_file": "D:\\fangzhenmoxing\\fangzhenmoxing\\PX4\\models\\x500_base\\meshes\\5010Base.dae",
+      "vertices": 2924,
+      "triangles": 3776,
+      "removed_tiny_triangles": 0,
+      "bounds": [
+        [
+          -0.014310940000000001,
+          -0.014310942143184268,
+          -0.00700000441784032
+        ],
+        [
+          0.014310940000000001,
+          0.014310938847066268,
+          0.011000003609302577
+        ]
+      ],
+      "scene_matrix": [
+        [
+          0.01,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.13916e-09,
+          -0.01,
+          0.0
+        ],
+        [
+          0.0,
+          0.01,
+          3.13916e-09,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "5010Bell_Bellside_0",
+      "file": "assets/5010Bell_Bellside_0.obj",
+      "material": "5010Bell_Material_002-material",
+      "source_geometry": "#Body1-mesh",
+      "source_file": "D:\\fangzhenmoxing\\fangzhenmoxing\\PX4\\models\\x500_base\\meshes\\5010Bell.dae",
+      "vertices": 720,
+      "triangles": 712,
+      "removed_tiny_triangles": 0,
+      "bounds": [
+        [
+          -0.029500000000000002,
+          -0.029499999960760755,
+          -9.221282500000001e-09
+        ],
+        [
+          0.029500000000000002,
+          0.029500004041668502,
+          0.013000009221282501
+        ]
+      ],
+      "scene_matrix": [
+        [
+          0.01,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.13916e-09,
+          -0.01,
+          0.0
+        ],
+        [
+          0.0,
+          0.01,
+          3.13916e-09,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "name": "5010Bell_BellHead_001_1",
+      "file": "assets/5010Bell_BellHead_001_1.obj",
+      "material": "5010Bell_Material_001-material",
+      "source_geometry": "#Body2-mesh",
+      "source_file": "D:\\fangzhenmoxing\\fangzhenmoxing\\PX4\\models\\x500_base\\meshes\\5010Bell.dae",
+      "vertices": 3073,
+      "triangles": 3206,
+      "removed_tiny_triangles": 0,
+      "bounds": [
+        [
+          -0.029500000000000002,
+          -0.0294999958798525,
+          0.012999990778717501
+        ],
+        [
+          0.029500000000000002,
+          0.029500004503721464,
+          0.0210000030214415
+        ]
+      ],
+      "scene_matrix": [
+        [
+          0.01,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          3.13916e-09,
+          -0.01,
+          0.0
+        ],
+        [
+          0.0,
+          0.01,
+          3.13916e-09,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "mapping": {
+    "px4": {
+      "rotor_0": {
+        "body": "rotor_0",
+        "joint": "rotor_0_joint"
+      },
+      "rotor_1": {
+        "body": "rotor_1",
+        "joint": "rotor_1_joint"
+      },
+      "rotor_2": {
+        "body": "rotor_2",
+        "joint": "rotor_2_joint"
+      },
+      "rotor_3": {
+        "body": "rotor_3",
+        "joint": "rotor_3_joint"
+      }
+    },
+    "arm": {
+      "shoulder_pan": {
+        "joint": "so101_shoulder_pan",
+        "effort": 10.0,
+        "velocity": 10.0,
+        "limits": [
+          -1.91986,
+          1.91986
+        ]
+      },
+      "shoulder_lift": {
+        "joint": "so101_shoulder_lift",
+        "effort": 10.0,
+        "velocity": 10.0,
+        "limits": [
+          -3.31613,
+          0.174533
+        ]
+      },
+      "elbow_flex": {
+        "joint": "so101_elbow_flex",
+        "effort": 10.0,
+        "velocity": 10.0,
+        "limits": [
+          -0.174533,
+          3.14159
+        ]
+      },
+      "wrist_flex": {
+        "joint": "so101_wrist_flex",
+        "effort": 10.0,
+        "velocity": 10.0,
+        "limits": [
+          -1.65806,
+          1.65806
+        ]
+      },
+      "wrist_roll": {
+        "joint": "so101_wrist_roll",
+        "effort": 10.0,
+        "velocity": 10.0,
+        "limits": [
+          -2.79253,
+          2.79253
+        ]
+      },
+      "gripper": {
+        "joint": "so101_gripper",
+        "effort": 10.0,
+        "velocity": 10.0,
+        "limits": [
+          -0.174533,
+          1.74533
+        ]
+      }
+    }
+  },
+  "unrendered_zero_area_wire_edges": [
+    {
+      "source": "D:\\fangzhenmoxing\\fangzhenmoxing\\PX4\\models\\x500_base\\meshes\\NXP-HGD-CF.dae",
+      "geometry": "#FMUK66-mesh",
+      "count": 48,
+      "indices": "23074 23073 23074 7312 23076 23075 23077 8291 23077 7496 23078 7496 23078 7493 23080 8283 23082 23081 23097 8290 23101 8284 23105 8205 23113 7523 23114 7485 23113 23114 23115 8285 23124 7280 23123 23124 23104 23125 23127 8206 23125 23126 23129 8288 23129 7488 23131 8287 23131 7485 23133 8286 23134 8209 23134 23135 23136 8208 23136 23137 23141 7501 23143 23142 23143 7496 23156 8293 23175 7505 23080 7514 23177 23178 23214 23203 23261 23229 23265 7530 23269 23251 23271 23270 23275 20158 23288 23275 23292 7325 23295 23294 23305 20129 23294 20129"
+    }
+  ],
+  "gazebo_motor_plugins": [
+    "<plugin filename=\"gz-sim-multicopter-motor-model-system\" name=\"gz::sim::systems::MulticopterMotorModel\">\n      <jointName>rotor_0_joint</jointName>\n      <linkName>rotor_0</linkName>\n      <turningDirection>ccw</turningDirection>\n      <timeConstantUp>0.0125</timeConstantUp>\n      <timeConstantDown>0.025</timeConstantDown>\n      <maxRotVelocity>1000.0</maxRotVelocity>\n      <motorConstant>8.54858e-06</motorConstant>\n      <momentConstant>0.016</momentConstant>\n      <commandSubTopic>command/motor_speed</commandSubTopic>\n      <motorNumber>0</motorNumber>\n      <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>\n      <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>\n      <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>\n      <motorType>velocity</motorType>\n    </plugin>\n    ",
+    "<plugin filename=\"gz-sim-multicopter-motor-model-system\" name=\"gz::sim::systems::MulticopterMotorModel\">\n      <jointName>rotor_1_joint</jointName>\n      <linkName>rotor_1</linkName>\n      <turningDirection>ccw</turningDirection>\n      <timeConstantUp>0.0125</timeConstantUp>\n      <timeConstantDown>0.025</timeConstantDown>\n      <maxRotVelocity>1000.0</maxRotVelocity>\n      <motorConstant>8.54858e-06</motorConstant>\n      <momentConstant>0.016</momentConstant>\n      <commandSubTopic>command/motor_speed</commandSubTopic>\n      <motorNumber>1</motorNumber>\n      <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>\n      <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>\n      <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>\n      <motorType>velocity</motorType>\n    </plugin>\n    ",
+    "<plugin filename=\"gz-sim-multicopter-motor-model-system\" name=\"gz::sim::systems::MulticopterMotorModel\">\n      <jointName>rotor_2_joint</jointName>\n      <linkName>rotor_2</linkName>\n      <turningDirection>cw</turningDirection>\n      <timeConstantUp>0.0125</timeConstantUp>\n      <timeConstantDown>0.025</timeConstantDown>\n      <maxRotVelocity>1000.0</maxRotVelocity>\n      <motorConstant>8.54858e-06</motorConstant>\n      <momentConstant>0.016</momentConstant>\n      <commandSubTopic>command/motor_speed</commandSubTopic>\n      <motorNumber>2</motorNumber>\n      <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>\n      <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>\n      <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>\n      <motorType>velocity</motorType>\n    </plugin>\n    ",
+    "<plugin filename=\"gz-sim-multicopter-motor-model-system\" name=\"gz::sim::systems::MulticopterMotorModel\">\n      <jointName>rotor_3_joint</jointName>\n      <linkName>rotor_3</linkName>\n      <turningDirection>cw</turningDirection>\n      <timeConstantUp>0.0125</timeConstantUp>\n      <timeConstantDown>0.025</timeConstantDown>\n      <maxRotVelocity>1000.0</maxRotVelocity>\n      <motorConstant>8.54858e-06</motorConstant>\n      <momentConstant>0.016</momentConstant>\n      <commandSubTopic>command/motor_speed</commandSubTopic>\n      <motorNumber>3</motorNumber>\n      <rotorDragCoefficient>8.06428e-05</rotorDragCoefficient>\n      <rollingMomentCoefficient>1e-06</rollingMomentCoefficient>\n      <rotorVelocitySlowdownSim>10</rotorVelocitySlowdownSim>\n      <motorType>velocity</motorType>\n    </plugin>\n    ",
+    "<plugin filename=\"MotorFailurePlugin\" name=\"gz::sim::systems::MotorFailureSystem\">\n    </plugin>\n  "
+  ],
+  "gazebo_sensors": [
+    "<sensor name=\"air_pressure_sensor\" type=\"air_pressure\">\n        <gz_frame_id>base_link</gz_frame_id>\n        <always_on>1</always_on>\n        <update_rate>50</update_rate>\n        <air_pressure>\n          \n          <pressure>\n            <noise type=\"gaussian\">\n              <mean>0</mean>\n              <stddev>3</stddev>\n            </noise>\n          </pressure>\n        </air_pressure>\n      </sensor>\n      ",
+    "<sensor name=\"magnetometer_sensor\" type=\"magnetometer\">\n        <gz_frame_id>base_link</gz_frame_id>\n        <always_on>1</always_on>\n        <update_rate>100</update_rate>\n        <magnetometer>\n          \n          \n          \n          \n          <x>\n            <noise type=\"gaussian\">\n              <stddev>0.0001</stddev>\n            </noise>\n          </x>\n          <y>\n            <noise type=\"gaussian\">\n              <stddev>0.0001</stddev>\n            </noise>\n          </y>\n          <z>\n            <noise type=\"gaussian\">\n              <stddev>0.0001</stddev>\n            </noise>\n          </z>\n        </magnetometer>\n      </sensor>\n      ",
+    "<sensor name=\"imu_sensor\" type=\"imu\">\n        <gz_frame_id>base_link</gz_frame_id>\n        <always_on>1</always_on>\n        <update_rate>250</update_rate>\n        <imu>\n          <angular_velocity>\n            \n            \n            <x>\n              <noise type=\"gaussian\">\n                <mean>0.0</mean>\n                <stddev>0.0008726646</stddev>\n              </noise>\n            </x>\n            <y>\n              <noise type=\"gaussian\">\n                <mean>0.0</mean>\n                <stddev>0.0008726646</stddev>\n              </noise>\n            </y>\n            <z>\n              <noise type=\"gaussian\">\n                <mean>0.0</mean>\n                <stddev>0.0008726646</stddev>\n              </noise>\n            </z>\n          </angular_velocity>\n          <linear_acceleration>\n            \n            \n            <x>\n              <noise type=\"gaussian\">\n                <mean>0.0</mean>\n                <stddev>0.00637</stddev>\n              </noise>\n            </x>\n            <y>\n              <noise type=\"gaussian\">\n                <mean>0.0</mean>\n                <stddev>0.00637</stddev>\n              </noise>\n            </y>\n            \n            <z>\n              <noise type=\"gaussian\">\n                <mean>0.0</mean>\n                <stddev>0.00686</stddev>\n              </noise>\n            </z>\n          </linear_acceleration>\n        </imu>\n      </sensor>\n      ",
+    "<sensor name=\"navsat_sensor\" type=\"navsat\">\n        <gz_frame_id>base_link</gz_frame_id>\n        <always_on>1</always_on>\n        <update_rate>30</update_rate>\n      </sensor>\n    "
+  ],
+  "ros_transmissions": [
+    "<transmission name=\"gripper_trans\">\n    <type>transmission_interface/SimpleTransmission</type>\n    <joint name=\"gripper\">\n      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>\n    </joint>\n    <actuator name=\"motor6\">\n      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>\n      <mechanicalReduction>1</mechanicalReduction>\n    </actuator>\n  </transmission>\n\n  \n  ",
+    "<transmission name=\"wrist_roll_trans\">\n    <type>transmission_interface/SimpleTransmission</type>\n    <joint name=\"wrist_roll\">\n      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>\n    </joint>\n    <actuator name=\"motor5\">\n      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>\n      <mechanicalReduction>1</mechanicalReduction>\n    </actuator>\n  </transmission>\n\n  \n  ",
+    "<transmission name=\"wrist_flex_trans\">\n    <type>transmission_interface/SimpleTransmission</type>\n    <joint name=\"wrist_flex\">\n      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>\n    </joint>\n    <actuator name=\"motor4\">\n      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>\n      <mechanicalReduction>1</mechanicalReduction>\n    </actuator>\n  </transmission>\n\n  \n  ",
+    "<transmission name=\"elbow_flex_trans\">\n    <type>transmission_interface/SimpleTransmission</type>\n    <joint name=\"elbow_flex\">\n      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>\n    </joint>\n    <actuator name=\"motor3\">\n      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>\n      <mechanicalReduction>1</mechanicalReduction>\n    </actuator>\n  </transmission>\n\n  \n  ",
+    "<transmission name=\"shoulder_lift_trans\">\n    <type>transmission_interface/SimpleTransmission</type>\n    <joint name=\"shoulder_lift\">\n      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>\n    </joint>\n    <actuator name=\"motor2\">\n      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>\n      <mechanicalReduction>1</mechanicalReduction>\n    </actuator>\n  </transmission>\n\n  \n  ",
+    "<transmission name=\"shoulder_pan_trans\">\n    <type>transmission_interface/SimpleTransmission</type>\n    <joint name=\"shoulder_pan\">\n      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>\n    </joint>\n    <actuator name=\"motor1\">\n      <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>\n      <mechanicalReduction>1</mechanicalReduction>\n    </actuator>\n  </transmission>\n\n"
+  ],
+  "not_implemented": [
+    "Gazebo motor/failure plugin behavior and transport",
+    "actuator/thrust/hover/arm controllers",
+    "sensor noise/update schedules and world-dependent GPS/pressure/magnetic field",
+    "ROS transmission/controller execution; effort/velocity metadata is not enforcement"
+  ],
+  "collision_notes": [
+    "X500 boxes and self_collide=false retained",
+    "SO101 original collision meshes are present; MuJoCo mesh contact uses convex hulls",
+    "visual decals use visual-only 20-micrometer thick boxes; no inferred mass"
+  ]
+}
