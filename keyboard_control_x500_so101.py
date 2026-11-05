@@ -676,12 +676,40 @@ def model_audit(m, d):
     mujoco.mj_resetDataKeyframe(old, od, old.key('arm_sequence_ready').id)
     for field in ('body_parentid', 'body_mass', 'body_pos', 'body_quat', 'body_ipos',
                   'body_inertia', 'body_iquat', 'jnt_type', 'jnt_axis', 'jnt_range',
-                  'jnt_pos', 'dof_damping', 'dof_frictionloss', 'geom_pos', 'geom_quat',
-                  'geom_size', 'geom_margin', 'geom_solref', 'geom_solimp',
-                  'geom_contype', 'geom_conaffinity', 'exclude_signature', 'qpos0',
+                  'jnt_pos', 'dof_damping', 'dof_frictionloss',
+                  'exclude_signature', 'qpos0',
                   'actuator_gainprm', 'actuator_biasprm', 'actuator_ctrlrange',
                   'actuator_forcerange', 'actuator_gear', 'actuator_trnid'):
         assert np.array_equal(getattr(m, field), getattr(old, field)), field
+    # Scene additions change geom indices. Audit each ORIGINAL collider/visual
+    # by name, allowing only the explicitly approved ground display extent.
+    for g in range(old.ngeom):
+        name = old.geom(g).name
+        current = m.geom(name).id
+        for field in ('geom_type', 'geom_bodyid', 'geom_pos', 'geom_quat',
+                      'geom_size', 'geom_margin', 'geom_solref', 'geom_solimp',
+                      'geom_contype', 'geom_conaffinity', 'geom_friction', 'geom_dataid'):
+            value = getattr(m, field)[current]
+            if name == 'ground' and field == 'geom_size':
+                assert np.array_equal(value, [6, 6, .1]), 'approved ground extent'
+            else:
+                assert np.array_equal(value, getattr(old, field)[g]), (name, field)
+    extras = {m.geom(g).name for g in range(m.ngeom)}-{old.geom(g).name for g in range(old.ngeom)}
+    assert extras == {'obstacle_box', 'obstacle_box_2', 'obstacle_box_3',
+                      'obstacle_box_4', 'obstacle_box_5', 'map_start_marker', 'map_goal_marker'}, extras
+    for name, pos in zip(('obstacle_box', 'obstacle_box_2', 'obstacle_box_3', 'obstacle_box_4', 'obstacle_box_5'),
+                         ((1, .6, .75), (2.8, -.6, .75), (4.6, .6, .75), (-1.8, 1.8, .75), (2.8, 2, .75))):
+        g = m.geom(name).id
+        assert m.geom_bodyid[g] == 0 and m.geom_type[g] == mujoco.mjtGeom.mjGEOM_BOX
+        assert np.array_equal(m.geom_pos[g], pos)
+        assert np.array_equal(m.geom_size[g], [.25, .25, .75])
+        assert np.array_equal(m.geom_quat[g], [1, 0, 0, 0])
+        assert m.geom_contype[g] == m.geom_conaffinity[g] == 1
+    for name, pos in (('map_start_marker', (0, 0, .003)), ('map_goal_marker', (5.2, -1.4, .003))):
+        g = m.geom(name).id
+        assert m.geom_bodyid[g] == 0 and m.geom_type[g] == mujoco.mjtGeom.mjGEOM_CYLINDER
+        assert np.array_equal(m.geom_pos[g], pos) and np.allclose(m.geom_size[g, :2], [.4, .002])
+        assert m.geom_contype[g] == m.geom_conaffinity[g] == 0
     assert np.array_equal(d.qpos, od.qpos) and np.array_equal(d.qvel, od.qvel)
     assert np.array_equal(d.ctrl, od.ctrl)
     assert (m.nq, m.nv, m.nu, m.neq) == (17, 16, 14, 0)
@@ -689,7 +717,8 @@ def model_audit(m, d):
     return {'source_sha256': hashlib.sha256(SOURCE.read_bytes()).hexdigest(),
             'new_xml_sha256': hashlib.sha256(XML.read_bytes()).hexdigest(),
             'all_original_physics_actuators_and_contacts_preserved': True,
-            'initial_state_and_zero_velocities_preserved': True}
+            'initial_state_and_zero_velocities_preserved': True,
+            'approved_scene_changes': 'five fixed boxes, visual start/goal markers and 12x12m grid ground'}
 
 
 def metrics(m, d, c):

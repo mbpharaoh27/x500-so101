@@ -194,5 +194,114 @@ def main():
     print(json.dumps(result,indent=2),flush=True)
 
 
+def teaching_tests():
+    """RAM-only synthetic demonstration regression; never claims human teaching."""
+    print('TEACH TEST: synthetic trajectory, real free-base MuJoCo dynamics; no files written.',flush=True)
+    print('INPUT', input_tests(),flush=True)
+    for key,action in [('T','record'),('Y','finish'),('B','replay'),('X','cancel')]:
+        router=native.Chords();router.click(True);router.update(set())
+        assert action in router.update(ctrl(key))
+        assert action not in router.update(ctrl(key))
+        router.update(set());assert action in router.update(ctrl(key))
+    m,d=core.load();c=native.TeachFlight(m,d);s=native.TeachSession(m);c.teach=s
+    print('MODEL_AUDIT',core.model_audit(m,d),flush=True)
+    s.action('replay',d,c);assert 'No valid' in s.message
+    s.action('record',d,c);assert s.mode=='EMPTY' and 'REFUSED' in s.message
+    keys=core.Keys()
+
+    def tick():
+        c.step(d,keys);mujoco.mj_step(m,d);mujoco.mj_forward(m,d);s.post_step(d,c)
+        assert c.safety(d) is None,(d.time,c.safety(d))
+        assert not any(w.number for w in d.warning)
+
+    def hold(seconds):
+        for _ in range(round(seconds/m.opt.timestep)):tick()
+
+    def takeoff():
+        keys.down={core.glfw.KEY_W}
+        begin=float(d.time)
+        while d.xpos[c.base,2]<1.10:
+            assert d.time-begin<15.;tick()
+        keys.clear();hold(5.)
+        assert s.stable(d,c)
+
+    takeoff()
+    # State-machine recording tests use an actual stationary hover, not a claimed
+    # human flight. Finished data is then explicitly replaced by synthetic rows.
+    s.action('record',d,c);assert s.mode=='RECORDING',s.message
+    hold(1.1);assert len(s.rows)>=55
+    saved=native.state_copy(d);saved_count=len(s.rows)
+    for _ in range(10):pass  # paused loop advances neither clock nor records
+    assert native.same_state(saved,d) and len(s.rows)==saved_count
+    s.action('finish',d,c);assert s.valid,s.message
+    old=s.rows;s.action('record',d,c);assert s.pending and s.rows is old
+    s.action('cancel',d,c);assert not s.pending and s.rows is old
+    s.action('record',d,c);s.action('finish',d,c);assert s.mode=='RECORDING'
+    s.interrupt(d,c,'test focus loss');assert s.mode=='INVALID' and not s.valid
+    s.action('replay',d,c);assert 'No valid' in s.message
+
+    start=d.xpos[c.base].copy();yaw=s.yaw(d,c)
+    # A deliberately wide, safe route around all three boxes. Not a learned or
+    # automatically selected route; sideways reference is a controller test.
+    points=[start,start+[0,-1.8,0],np.array([5.2,-1.8,start[2]]),np.array([5.2,-1.4,start[2]])]
+    rows=[];clock=0.
+    for a,b in zip(points[:-1],points[1:]):
+        T=max(2.,np.linalg.norm(b-a)/.10)
+        for elapsed in np.linspace(0,T,max(2,int(np.ceil(T/.02))),endpoint=False):
+            u=elapsed/T;p=a+(b-a)*core.smoothstep(u)
+            row={'t':clock+float(elapsed),'p':p,'v':(b-a)*30*u*u*(1-u)**2/T,
+                 'yaw':yaw,'arm_target':core.FOLDED.copy(),'arm_actual':core.FOLDED.copy(),'state':'FLIGHT'}
+            rows.append(row)
+        clock+=T
+    rows.append(dict(rows[-1],t=clock,p=points[-1].copy(),v=np.zeros(3)))
+    s.rows=rows;s.fingerprint=s.scene_hash();s.valid=True;s.mode='READY'
+    s.prepare(d,c)
+    print('SYNTHETIC_PREPARED',{'samples':len(rows),'segments':len(s.segments),'duration_s':s.duration},flush=True)
+    # Collision rejection includes between-waypoint positions.
+    safe_rows=s.rows
+    s.rows=[dict(rows[0],t=0.,p=start.copy()),dict(rows[-1],t=30.,p=np.array([2.,1.2,start[2]]))]
+    try:
+        s.prepare(d,c)
+    except ValueError as e:print('UNSAFE_ROUTE_REJECTED',str(e),flush=True)
+    else:raise AssertionError('Unsafe straight route was accepted')
+    s.rows=safe_rows
+    old_pos=m.geom_pos[m.geom('obstacle_box').id].copy()
+    m.geom_pos[m.geom('obstacle_box').id,0]+=.01
+    s.action('replay',d,c);assert not s.valid and 'changed' in s.message
+    m.geom_pos[m.geom('obstacle_box').id]=old_pos;mujoco.mj_forward(m,d)
+    s.valid=True;s.fingerprint=s.scene_hash();s.mode='READY';s.prepare(d,c)
+    # Real moving trajectory abort and focus loss handover, near the safe start.
+    s.action('replay',d,c);assert s.mode=='PLAYING',s.message
+    hold(1.)
+    s.interrupt(d,c,'synthetic focus loss');assert s.mode=='BRAKING'
+    hold(2.);assert s.mode=='READY'
+    # Return via the standard controller/reference for testing, no qpos/qvel writes.
+    # Separate repeat runs start from the legitimate ground keyframe reset.
+    results=[]
+    for run in range(3):
+        c=native.reset(m,d);c.teach=s;s.mode='READY';s.stable_since=None;keys.clear()
+        takeoff()
+        s.action('replay',d,c);assert s.mode=='PLAYING',s.message
+        started=float(d.time);next_print=started+30
+        while s.mode=='PLAYING':
+            tick()
+            assert d.time-started<s.duration+4
+            if d.time>=next_print:
+                print(f'REPLAY {run+1}: {s.clock:.1f}/{s.duration:.1f}s',flush=True);next_print+=30
+        assert s.last_stats['completed'],(s.message,s.last_stats)
+        hold(1.)
+        result=s.last_stats
+        assert result['rms_error']<=.05 and result['max_error']<=.10
+        assert result['min_gap']>=.20 and result['max_tilt_deg']<10
+        assert not any(result['warnings'])
+        results.append(result)
+        print('SYNTHETIC_REPLAY',run+1,json.dumps(result),flush=True)
+    print(json.dumps({'passed':True,'scope':'Synthetic reference and actual dynamics, NOT human route/window keyboard acceptance',
+                      'repeats':results,'files_written':False}),flush=True)
+
+
 if __name__=='__main__':
-    main()
+    if '--teach-test' in sys.argv:
+        teaching_tests()
+    else:
+        main()

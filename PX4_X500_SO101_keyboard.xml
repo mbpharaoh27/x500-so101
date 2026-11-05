@@ -4,6 +4,8 @@
   <option timestep="0.00025" gravity="0 0 -9.81" integrator="implicitfast" />
   <visual />
   <asset>
+    <texture name="map_grid_texture" type="2d" builtin="checker" width="256" height="256" rgb1="0.22 0.25 0.28" rgb2="0.38 0.41 0.44" />
+    <material name="map_grid_material" texture="map_grid_texture" texrepeat="6 6" texuniform="false" reflectance="0" />
     <material name="NXP-HGD-CF_LandingFoam-material" rgba="0.7019608 0.7019608 0.7019608 1" />
     <material name="NXP-HGD-CF_LandingRubber-material" rgba="0.003921569 0.003921569 0.003921569 1" />
     <texture name="NXP-HGD-CF_CarbonFiber-material_texture" type="2d" file="assets/CF.png" />
@@ -56,7 +58,16 @@
   <worldbody>
     <light pos="1 -1 3" dir="-0.2 0.2 -1" diffuse="0.8 0.8 0.8" />
     <light pos="-1 1 2" dir="0.2 -0.2 -1" diffuse="0.5 0.5 0.5" />
-    <geom name="ground" type="plane" size="2 2 0.1" rgba="0.25 0.28 0.3 1" solref="0.005 1" />
+    <geom name="ground" type="plane" size="6 6 0.1" material="map_grid_material" solref="0.005 1" />
+    <!-- Staggered teaching scene. Full box sizes: 0.5 x 0.5 x 1.5 m. -->
+    <geom name="obstacle_box" type="box" pos="1 0.6 0.75" size="0.25 0.25 0.75" rgba="0.9 0.35 0.08 1" contype="1" conaffinity="1" solref="0.005 1" />
+    <geom name="obstacle_box_2" type="box" pos="2.8 -0.6 0.75" size="0.25 0.25 0.75" rgba="0.95 0.65 0.1 1" contype="1" conaffinity="1" solref="0.005 1" />
+    <geom name="obstacle_box_3" type="box" pos="4.6 0.6 0.75" size="0.25 0.25 0.75" rgba="0.65 0.25 0.8 1" contype="1" conaffinity="1" solref="0.005 1" />
+    <geom name="obstacle_box_4" type="box" pos="-1.8 1.8 0.75" size="0.25 0.25 0.75" rgba="0.15 0.55 0.9 1" contype="1" conaffinity="1" solref="0.005 1" />
+    <geom name="obstacle_box_5" type="box" pos="2.8 2 0.75" size="0.25 0.25 0.75" rgba="0.85 0.2 0.3 1" contype="1" conaffinity="1" solref="0.005 1" />
+    <!-- Visual ground markers only; not collision bodies or automatic flight goals. -->
+    <geom name="map_start_marker" type="cylinder" pos="0 0 0.003" size="0.4 0.002" rgba="0.1 0.9 0.25 1" contype="0" conaffinity="0" />
+    <geom name="map_goal_marker" type="cylinder" pos="5.2 -1.4 0.003" size="0.4 0.002" rgba="0.1 0.7 1 1" contype="0" conaffinity="0" />
     <body name="base_link" pos="0 0 0.22859950416644" quat="1 0 0 0">
       <freejoint name="x500_free" />
       <inertial mass="1.99999999969" pos="0 0 0" fullinertia="0.0216666666633 0.0216666666633 0.0399999999938 0 0 0" />
